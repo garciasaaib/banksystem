@@ -1,0 +1,181 @@
+Sistema bancario
+     administrar las cuentas de los clientes
+
+       requerimientos base
+                  copia del ine
+                  comporbante de domicilio no mayor a 3 meses
+                  deposito
+                        debito: 1000 pesos
+                  comprobantes de ingresos
+
+
+       tarjeta de credito      limite
+       tarjeta de debito
+       credito hipotecario     => cuestionario
+                                      aspectos laborales
+                                      antiguedad
+                                      sueldo
+                                      prestamos anteriores
+                                      aval (nombre y propiedades que garanticen el monto del prestamo) 
+
+    en cada cuenta debe haber un titular y maximo 3
+
+Pasos a seguir.....
+    Flujo de sistema
+    Validar dicho flujo
+    Diseño de la interfaz
+    Bases de datos (definir si sera relacional o no o ambas)
+
+	Retiro maximo por dia? Ilimitado Maxima Cantidad? Mientras tengas dinero en cuenta
+
+	Genera comision? 0.01 centavos
+	Cuentas premium? NO
+	Mantenimiento tajeta (minimo ninguno, comisiones por retiro 0.01cent)
+	Cuales son todas las comisiones?
+	por apertura %5 sobre monto solicitado (credito hipotecario)
+	Credito y debito ninguna
+
+	Que acciones pueden ejecutar dependiendo del rol?
+	-Gerente: visualizar cuantas cuentas se aperturaron y transacciones por dia por ejecutivo, crud ejecutivos
+	-Ejecutivo: crear cuentas de clientes
+	-Cajero: seleccionar y actualizar estados de cuenta; administracion del dinero
+
+	APP MOVIL? multiplataforma NO, solo web responsiva
+	Se puede bloquear/desbloquear desde la web, NO
+	Servicio al cliente? horarios 9am a 4pm de L-V (telefono, chat, email)
+	Se pueden hacer transferencias interbancarias? NO
+	Cuantos intentos acceso se bloquea tarjeta (3) NO
+	Convenios con terceros (depositos / retiros) NO
+	Como se puede cambiar contraseña? Si con ejecutivo con autorizacion del gerente (Definir / cambiar / aletorio) 
+	En caso de robo / extravio (Reponer plastico 100$) comision, te generamos #folio para identificar
+	Retiro sin tarjeta? NO
+	Avisos / notificaciones Sí, mediante un estado de cuenta al mes
+	Registro de movimientos / historial de transaciones (en sistema) Sí
+	Horario de transaciones? 9am - 4 L-V no se labora en dias festivos
+	Dias laborales del banco?
+
+Los clientes podran hacer transacciones en linea? NO
+Existe un horario de apertura en el banco? 9am
+Cuantos ejecutivos tendran acceso al sistema? 2 ejecutivos en sucursal 1 cajero 1 gerente
+Solo habra un gerente por sucursal? sí
+Un ejecutivo puede ser cajero al mismo tiempo? Sí, asignacion de rol lo asigna el gerente.
+
+
+Datos personales del cliente
+	Nombre
+	Apellidos
+	Fecha de nacimiento
+	Genero
+	Calle
+	Número ext
+	Número int
+	Entre calles
+	Colonia
+	CP
+	Municipio
+	Ciudad
+	Estado
+	Teléfono de casa
+	Teléfono celular
+	RFC
+	Correo
+
+
+Datos cuenta
+	tipo(c d)
+	fecha creacion
+	estado
+	monto
+	comision
+	limite credito
+	beneficiarios(3 max)
+		nombre completo
+		parentesco
+		porcentaje
+		fecha de nacimiento
+		telefono
+		correo
+	numero tarjeta
+		fecha de vencimiento
+		nip
+
+Datos del ejecutivo
+	Nombre
+	Apellido
+	Area (credito / débito / préstamos)
+	Puesto (gerente / ejecutivo)
+	Sucursal
+	Clave Empleado
+	Contraseña
+	Status (activo / baja)
+
+Banco - Informacion
+	Nombre
+	Direccion
+	Telefono
+	Email
+	CEO
+	Descripcion
+	Sucursales
+	Seguridad (CNBV / Comision Nacional Bancaria y de Valores)
+    Ligas a las redes sociales
+
+Credito Hipotecario/ Informacion
+	ocupacion
+	trabajo actual
+	salario
+	antiguedad de empleo
+	prestamos anteriores
+	Zona de residencia
+	patrimonio
+		casa propia
+		casa rentada
+		antiguedad
+	fecha de aprobacion
+	fecha de solicitud
+	monto solicitado
+	monto otorgado
+	status
+		aprobado
+		rechazado
+	Plazo de la deuda
+	intereses
+	comision
+	Avales
+		Nombre
+		Apellidos
+		Telefono
+		Correo
+		Direccion
+		Propiedades
+			copia de la escritura
+			valor del inmueble
+
+
+transacciones del banco
+	monto_inicial
+	monto_final
+	fecha
+	tipo de transaccion (retiro/deposito)
+	cantidad
+	billetes disponibles
+		20
+		50
+		100
+		200
+		500
+		1000
+	monedas disponibles
+		10 c
+		50 c
+		1 peso
+		2 pesos
+		5 pesos
+		10 pesos
+		20 pesos
+
+
+Crear una cuenta (credito o debito)
+
+Solicitar un credito hipotecario
+
