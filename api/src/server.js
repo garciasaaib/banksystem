@@ -2,10 +2,10 @@ import express from "express";
 import middleWares from "./middlewares";
 import routes from "./routes";
 
-const server = express();
+const app = express();
 
-server.use(middleWares);
+app.use(middleWares);
 
-server.use("/api", routes);
+app.use('/api', routes);
 
-export default server;
+export default app;

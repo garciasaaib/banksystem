@@ -1,1 +1,7 @@
-GET http://localhost:3002/api HTTP/1.1
+GET http://localhost:3001/api HTTP/1.1
+
+###
+GET http://localhost:3001/api/user HTTP/1.1
+
+###
+GET http://localhost:3001/api/other HTTP/1.1

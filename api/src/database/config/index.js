@@ -15,9 +15,6 @@ module.exports = {
 
   // Configuracion de Migrations
   migrationStorage: "sequelize",
-  migrationStorageTableName: "migrations",
-
-  // logs
-  logging: false
+  migrationStorageTableName: "migrations"
 
 }
