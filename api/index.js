@@ -18,8 +18,9 @@
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import server from './src/server'
-import env from './src/constants/env'
+import 'dotenv/config'
+const {API_PORT} = process.env 
 // const PORT = process.env.PORT
-server.listen(env.PORT, () => {
-  console.log(`we are alive in port ${env.PORT}`)
+server.listen(API_PORT, () => {
+  console.log(`API is in port ${API_PORT}`)
 })

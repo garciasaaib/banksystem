@@ -1,4 +1,4 @@
 import 'dotenv/config'
 export default {
-  PORT: process.env.PORT || 3001
+  API_PORT: process.env.API_PORT || 3001
 }

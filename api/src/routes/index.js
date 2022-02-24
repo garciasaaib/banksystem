@@ -1,8 +1,10 @@
 import { Router } from "express";
+import { pool } from '../database'
 const router = Router()
 
-router.get('/', function (req, res) {
-  res.send('GET request to the homepage');
+router.get('/', async (req, res) => {
+  const result = await pool.query("SELECT * FROM people")
+  res.send(result.rows);
 });
 
 export default router
