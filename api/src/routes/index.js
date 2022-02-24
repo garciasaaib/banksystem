@@ -1,10 +1,14 @@
 import { Router } from "express";
-import { pool } from '../database'
+// import { db} from '../database/models'
+const {users} = require('../database/models')
 const router = Router()
 
 router.get('/', async (req, res) => {
-  const result = await pool.query("SELECT * FROM people")
-  res.send(result.rows);
+  res.send({status: 'OK', message: 'This api is working'});
+});
+
+router.post('/', async (req, res) => {
+  res.send({status: 'OK', message: 'This api is working'});
 });
 
 export default router

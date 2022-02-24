@@ -19,7 +19,7 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import server from './src/server'
 import 'dotenv/config'
-const {API_PORT} = process.env 
+const { API_PORT } = process.env
 // const PORT = process.env.PORT
 server.listen(API_PORT, () => {
   console.log(`API is in port ${API_PORT}`)
